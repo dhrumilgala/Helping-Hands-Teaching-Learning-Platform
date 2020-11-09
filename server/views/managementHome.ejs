@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NGO Portal | Management</title>
+	<link href="styles/management_dashboard.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script type="text/javascript" src="js/management_dashboard.js"></script>
+</head>
+<body>
+    <span class="bckg"></span>
+    <header>
+        <h1>Dashboard</h1>
+        <nav>
+            <ul>
+            <li>
+                <a href="javascript:show_students();" data-title="View Students">View Students</a>
+            </li>
+            <li>
+                <a href="javascript:show_teachers();" data-title="View Teachers">View Teachers</a>
+            </li>
+            <li>
+                <a href="javascript:show_schedule();" data-title="View Schedule">View Schedule</a>
+            </li>
+						<li>
+								<a href="javascript:show_donations();" data-title="View Donations">View Donations</a>
+						</li>
+            </ul>
+        </nav>
+    </header>
+	<main>
+        <div class="title">
+            <h2>Management</h2>
+            <a href="javascript:void(0);">Hello <%= user.username %>!</a>
+            <a href="/logout">Logout</a>
+        </div>
+
+				<article class="larg" style="display: none;" id="students">
+            <div id="detailsDiv1">
+            <h3>Student Details <span class="entypo-down-open"></span></h3>
+                </div>
+                <a href="javascript:add_user();" data-title="Add User">Add Student</a>
+
+
+                 <div id="div_addstudent" style="display:none">
+                  Name:<br>
+                  <input type="text" name="firstname" id="fn" class="form__group"><br>
+                  Email:<br>
+                  <input type="email" name="lastname" id="em" class="form__group"><br><br>
+                  Username:<br>
+                  <input type="text" name="username" id="un" class="form__group"><br>
+                  Password:<br>
+                  <input type="password" name="password" id="pw" class="form__group"><br>
+                  <input type="submit" value="Submit" class="btn" onclick="submit_student_add()">
+                </div>
+        </article>
+
+
+
+        <article class="larg" style="display: none;" id="teachers">
+            <div id="detailsDiv2">
+            <h3>Teacher Details <span class="entypo-down-open"></span></h3>
+            </div>
+						<a href="javascript:add_teacher();" data-title="Add Teacher">Add Teacher</a>
+
+
+            <div id="div_addteacher" style="display:none">
+                  Name:<br>
+                  <input type="text" name="firstname" id="t_fn" class="form__group"><br>
+                  Email:<br>
+                  <input type="email" name="lastname" id="t_em" class="form__group"><br><br>
+                  Username:<br>
+                  <input type="text" name="username" id="t_un" class="form__group"><br>
+                  Password:<br>
+                  <input type="password" name="password" id="t_pw" class="form__group"><br>
+                  <!-- <input type="select multiple" name="students" id="s_stu"><br> -->
+                  Students:<br>
+                <div class="select_menu">
+
+                  <select multiple id="t_students" class="select_menu">
+                    
+                  </select>
+                </div>  
+                
+
+                  <input type="submit" value="Submit" class="btn" onclick="submit_teacher_add()">
+                </div>
+        </article>
+
+        <article class="larg" style="display: none;" id="schedule">
+            <div id="detailsDiv">
+            <h3>Schedule Details <span class="entypo-down-open"></span></h3>
+						</div>
+						<a href="javascript:add_schedule();" data-title="Add Schedule">Add Schedule</a>
+
+            <div id="div_addschedule" style="display:none">
+                  Name:<br>
+                  <input type="text" name="name" id="s_fn" class="form__group"><br>
+                  Work Description:<br>
+                  <input type="text" name="lastname" id="s_work" class="form__group"><br><br>
+                  Class:<br>
+                  <input type="text" name="class" id="s_class" class="form__group"><br>
+                  Subject:<br>
+                  <input type="text" name="subject" id="s_sub" class="form__group"><br>
+                  Days:<br>
+                  <input type="text" name="days" id="s_days" class="form__group"><br>
+                  <input type="submit" value="Submit" class="btn" onclick="submit_schedule_add()">
+                </div>
+        </article>
+
+				<article class="larg" style="display: none;" id="donations">
+            <div id="detailsDiv3">
+            <h3>Donation Details <span class="entypo-down-open"></span></h3>
+            </div>
+            <a href="javascript:add_donation();" data-title="Add Donation">Add Donation</a>
+            <div id="div_adddonation" style="display:none">
+              Name:<br>
+              <input type="text" name="name" id="d_fn" class="form__group"><br>
+              Email Id:<br>
+              <input type="text" name="lastname" id="d_work" class="form__group"><br>
+              Amount:<br>
+              <input type="number" name="days" id="d_days" class="form__group"><br>
+              <input type="submit" value="Submit" class="btn" onclick="submit_donation_add()">
+            </div>
+        </article>
+
+    </main>
+    </body>
+</html>

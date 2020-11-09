@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+    <title>NGO Portal | Login</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<link href="styles/login.css" rel="stylesheet">
+</head>
+<body>
+<div class="wrapper">
+        <div class="container">
+            <h1>Welcome</h1>
+            
+            <div class="form">
+                <input type="text" name="username" id="username" placeholder="Username">
+				<input type="password" name="password" id="password" placeholder="Password">
+				<div class="switch-field">
+					<h2>Usertype</h2><br>
+						<input type="radio" id="switch_3_left" name="usertype" value="student" checked/>
+						<label for="switch_3_left">Student</label>
+						<input type="radio" id="switch_3_center1" name="usertype" value="teacher" />
+						<label for="switch_3_center1">Teacher</label>
+						<input type="radio" id="switch_3_center2" name="usertype" value="volunteer" />
+						<label for="switch_3_center2">Volunteer</label>
+						<input type="radio" id="switch_3_right" name="usertype" value="management" />
+						<label for="switch_3_right">Management</label>
+					  </div> <br><br><br><br><br>
+                <button id="login-button">Login</button>
+            </div>
+        </div>
+        
+        
+    </div>
+<script type="text/javascript" src="js/login.js"></script>
+</body>

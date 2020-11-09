@@ -1,0 +1,31 @@
+{
+  "name": "ngo-project",
+  "version": "1.0.0",
+  "description": "website for the ngo",
+  "main": "server/index.js",
+  "scripts": {
+    "test": "mocha --exit",
+    "start": "node index"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "author": "Dhrumil Gala",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "cookie-parser": "^1.4.3",
+    "dotenv": "^6.1.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "helmet": "^4.2.0",
+    "jwt-simple": "^0.5.5",
+    "mongoose": "^5.3.3",
+    "nodemon": "^2.0.6",
+    "require-dir": "^1.1.0"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0",
+    "supertest": "^3.3.0"
+  }
+}

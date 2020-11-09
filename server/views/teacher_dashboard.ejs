@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="styles/teacher_dashboard.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script type="text/javascript" src="js/teacher_dashboard.js"></script>
+    
+</head>    
+<body>
+    <span class="bckg"></span>
+    <header>
+        <h1>Dashboard</h1>
+        <nav>
+            <ul>
+            <li>
+                <a href="javascript:add_videos();" data-title="Add Video">Add E-learning materials</a>
+            </li>
+            <li>
+                <a href="javascript:show_videos();" data-title="E-Learning">E-Learning</a>
+            </li>
+            <li>
+                <a href="javascript:show_profile();" data-title="Profile">Profile</a>
+            </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+        <div class="title">
+            <!--<h2>Add Videos</h2>-->
+            <a href="javascript:void(0);">Hello, <i><%= user.username %>!</i></a>
+            <a href="/logout">Logout</a>
+        </div>
+
+         
+        <article class="larg" id="addVideos">
+
+             
+            
+                <div class="form__group">
+                     <input type="text" placeholder="Enter Topic Name" class="form__input" id="video_name"/>
+                </div> 
+                <div class="form__group">
+                     <input type="text" placeholder="Enter E-learning material URL" class="form__input" id="video_url"/>
+                </div> 
+ 
+                <button id='addVideo' class='btn' type="button">Add to Catalog</button>
+              
+            
+        </article>
+
+        
+        <article class="larg" style="display:none;" id="videos">
+            
+        </article>
+
+        <article class="larg" style="display: none;" id="profile">
+            <div id="detailsDiv">
+            <h3>Profile Details <span class="entypo-down-open"></span></h3>
+            </div>
+        </article>
+    </main>
+    </body>
+</html>

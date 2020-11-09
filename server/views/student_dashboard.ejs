@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="styles/student_dashboard.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/student_dashboard.js"></script>
+    
+</head>    
+<body>
+    <span class="bckg"></span>
+    <header>
+        <h1>Dashboard</h1>
+        <nav>
+            <ul>
+            
+            <li>
+                <a href="javascript:show_videos();" data-title="E-Learning">E-Learning Material</a>
+            </li>
+            <li>
+                <a href="javascript:show_profile();" data-title="Profile">Profile</a>
+            </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="title">
+            
+            <a href="javascript:void(0);">Hello <%= user.username %>!</a>
+            <a href="/logout">Logout</a>
+        </div>
+
+        <article class="larg" id="assignments">
+            
+        </article>
+
+        <article class="larg" style="display:none;" id="videos">
+           
+        </article>
+
+        <article class="larg" style="display: none;" id="profile">
+            <div id="detailsDiv">
+            <h3>Profile Details <span class="entypo-down-open"></span></h3>
+            </div>
+        </article>
+    </main>
+    </body>
+</html>

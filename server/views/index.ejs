@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NGO Portal</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,700italic,400italic' rel='stylesheet' type='text/css'>
+	<link href="styles/index.css" rel="stylesheet">
+	<style>
+		.footer {
+		  position: fixed;
+		  left: 0;
+		  bottom: 0;
+		  height:110px;
+		  width: 100%;
+		  background-color: yellow;
+		  color:black;
+		  text-align: center;
+		}
+		</style>
+</head>
+<body>
+		<div class="header">
+			<div class="sides">
+				
+				<img src="resources/SVKM.png" id="logo_image">
+				<a href="#about_us" class="logo1">ABOUT US</a>
+				<a href="#donashun" class="logo2">DONATE</a>
+				
+			
+				<a class="logo3" href="/volunteer_registration">VOLUNTEER NOW</a> 
+				<a href="http://localhost:8080/login" class="logo4">LOG IN</a>
+					
+			</div>
+			
+				<div class="info">
+					<h4><a href="#category"></a></h4>
+				  <h1 class="schoolName"><b>DJSCE SCHOOL</b></h1>
+				  <div class="meta" style="font-size: 1.8em;">
+						Integrated sustainable community development through community participation.
+					</div>
+				</div>
+		</div>
+
+<!--</section>-->
+<div id="about_us">
+	<h1 id="about_us_text"><b>About Us</b></h1>
+	<div id="about_us_font">
+		A non-profit organization founded to improve the lives and livelihoods of people from the vulnerable, marginalized and under-developed sections of the society. 
+	</div>
+
+	</div>
+<div style="display: none">
+	<form method='post' action='https://securegw-stage.paytm.in/theia/processTransaction' name='f1'></form>
+</div>
+
+<div class="donation-container" id="donashun" ng-app="ssbApp" ng-controller="ssbCtrl">
+		
+            
+		<div class="donation-box" ng-show="showHideTest">
+			<div class="title">Click Below to Donate</div>
+			
+		<h1 class="h1" style="padding-left: 300px;"><br><br><br><form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_Fz17wr81Qwn3wG"> </script> </form></h1>
+	
+	
+</div>
+<div class="footer">
+	<h1>FOR HELP OR ANY DOUBTS</h1>
+	<p>MAIL US AT:- djscengo@gmail.com</p>
+	<p>CONTACT US AT:- 9999999999</p>
+  </div>
+
+<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>
