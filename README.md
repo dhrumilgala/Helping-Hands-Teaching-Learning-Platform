@@ -1,1 +1,1 @@
-# DJSCE-NGO
+# Helping Hands
